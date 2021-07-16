@@ -1,0 +1,51 @@
+[
+    {
+        "id": "channeln5",
+        "nombre": "Channel N5",
+        "precio": 45,
+        "tipo": "perfume",
+        "thumbnailUrl": "https://drive.google.com/file/d/1YrOax59wWzgUJAPPVkjb_Ts0Jht3qv9e/view?usp=sharing"
+    },
+    {
+        "id": 2,
+        "nombre": "Labial Clinique",
+        "precio": 28,
+        "tipo": "maquillaje",
+    },
+    {
+        "id": 3,
+        "nombre": "Polvo Base",
+        "precio": 20,
+        "tipo": "maquillaje",
+    },
+    { 
+        "id": 4,
+        "nombre": "Dolce & Gabana Grey",
+        "precio": 43,
+        "tipo": "perfume",
+    },
+    {
+        "id": 5,
+        "nombre": "Sleeping Beauty",
+        "precio": 36,
+        "tipo": "locion",
+    },
+    {
+        "id": 6,
+        "nombre": "Curology",
+        "precio": 30,
+        "tipo": "locion",
+    }, 
+    {
+        "id": 7,
+        "nombre": "Mochila Azul",
+        "precio": 12,
+        "tipo": "bolso",
+    },
+    {
+        "id": 8,
+        "nombre": "Bolso Rojo",
+        "precio": 15,
+        "tipo": "bolso",
+    }
+]

@@ -1,0 +1,76 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/************************NAVBAR************************/
+.main {
+	margin-top: 30px;
+}
+.navbar {
+	background-color: #3b7080;
+}
+
+#userData {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#userName {
+	display: flex;
+	justify-self: end;
+	align-items: center;
+	margin-right: 15px;
+	color: #000;
+	font-weight: 600;
+    max-width: 200px;
+    max-height: 40px;
+}
+#userLogged {
+	margin-right: 15px;
+	color: #fff;
+	font-weight: 600;
+	margin-left: 15px;
+}
+
+
+button {
+	background-color: #ec9192 !important;
+	border-color: #8f0f29 !important;
+	color: #8f0f29 !important;
+	font-family: "Raleway", sans-serif;
+	font-style: italic;
+}
+
+#btnUser {
+	background-color: rgb(52, 158, 158) !important;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+/**********************FOOTER************************/
+.footer {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 4.7em;
+    margin-top: 85px;
+	bottom: 0;
+	background-color: #db5375;
+	z-index: 1999;
+	color: #fef6c9;
+}
+
+.col-12 p {
+	margin: 0;
+}
+
+#whatsapp,
+#instagram {
+	color: #000;
+	font-size: 20px;
+	font-weight: 500;
+}
