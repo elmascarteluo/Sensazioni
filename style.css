@@ -35,10 +35,9 @@
 }
 
 
-button {
-	background-color: #ec9192 !important;
+.btn-dark{
+	background-color: #db5375!important;
 	border-color: #8f0f29 !important;
-	color: #8f0f29 !important;
 	font-family: "Raleway", sans-serif;
 	font-style: italic;
 }
@@ -50,7 +49,7 @@ button {
 }
 
 /**********************FOOTER************************/
-.footer {
+.footerBot {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
@@ -74,3 +73,10 @@ button {
 	font-size: 20px;
 	font-weight: 500;
 }
+
+.carrito, h1, hr {
+	width: 50%;
+	margin: auto;
+	margin-right: 0;
+}
+

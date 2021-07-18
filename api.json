@@ -1,15 +1,15 @@
 [
     {
-        "id": "channeln5",
-        "nombre": "Channel N5",
-        "precio": 45,
+        "id": 1,
+        "nombre": "Chanel N5",
+        "precio": 120,
         "tipo": "perfume",
         "thumbnailUrl": "https://elmascarteluo.github.io/Sensazioni/images/perfume-chanel-n5-resized.png"
     },
     {
         "id": 2,
         "nombre": "Labial Clinique",
-        "precio": 28,
+        "precio": 17,
         "tipo": "maquillaje",
         "thumbnailUrl": "https://elmascarteluo.github.io/Sensazioni/images/labial%20Clinique.jpg"
     },
@@ -23,14 +23,14 @@
     { 
         "id": 4,
         "nombre": "Dolce & Gabana Grey",
-        "precio": 43,
+        "precio": 41,
         "tipo": "perfume",
         "thumbnailUrl": "https://elmascarteluo.github.io/Sensazioni/images/d&g%20Grey.jpg"
     },
     {
         "id": 5,
         "nombre": "Sleeping Beauty",
-        "precio": 36,
+        "precio": 26,
         "tipo": "locion",
         "thumbnailUrl": "https://elmascarteluo.github.io/Sensazioni/images/sleeping%20beauty.jpg"
     },
