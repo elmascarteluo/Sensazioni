@@ -2,9 +2,7 @@ const añadirCards = (data) => {
 	data.forEach((producto) => {
 		templateCard.querySelector("h5").textContent = producto.nombre;
 		templateCard.querySelector("p").textContent = producto.precio;
-		templateCard
-			.querySelector("img")
-			.setAttribute("src", producto.thumbnailUrl);
+		templateCard.querySelector("img").setAttribute("src", producto.thumbnailUrl);
 		templateCard.querySelector("button").dataset.id = producto.id;
 
 		const clone = templateCard.cloneNode(true);
