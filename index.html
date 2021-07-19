@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3B7080">
     <title>Sensazioni Store | Lotions & Accesories.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -12,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&family=Tangerine:wght@400;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -55,29 +59,29 @@
     </nav>
 
     <div class="container">
-        <h1>Carrito de Compras</h1>
-        <hr>
-        <table class="table carrito">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Item</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Acción</th>
-                    <th scope="col">Total</th>
-                </tr>
-            </thead>
-            <tbody id="items"></tbody>
-            <tfoot>
-                <tr id="footer">
-                    <th scope="row" colspan="5">Carrito vacío - ¡Añade los productos que te gustan!</th>
-                </tr>
-            </tfoot>
-        </table>
-        <div class="row mt-3 mt-xl-5" id="cards"></div>
-
-
+        <div class="lista">
+            <h1>Lista de Compras</h1>
+            <hr>
+            <table class="table carrito">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Aum/Dis</th>
+                        <th scope="col">Monto</th>
+                    </tr>
+                </thead>
+                <tbody id="items"></tbody>
+                <tfoot>
+                    <tr id="footer">
+                        <th scope="row" colspan="5">Carrito vacío - ¡Añade los productos que te gustan!</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
+    <div class="row mt-3 mt-xl-5" id="cards"></div>
 
     <template id="template-card">
         <div class="col-12 col-sm-6 col-md-4 col-xl-3 pl-0 pr-0 mb-5">
@@ -86,7 +90,7 @@
                 <div class="card-body">
                     <h5>Titulo</h5>
                     <p>precio</p>
-                    <button class="btn btn-dark">Añadir a carrito</button>
+                    <button class="btn btn-dark btn-add">Añadir a la lista</button>
                 </div>
             </div>
         </div>
@@ -95,8 +99,8 @@
     <template id="template-carrito">
         <tr>
             <th scope="row">id</th>
-            <td>Café</td>
-            <td>1</td>
+            <td></td>
+            <td></td>
             <td>
                 <button class="btn btn-info btn-sm">
                     +
@@ -110,11 +114,11 @@
     </template>
 
     <template id="template-footer">
-        <th scope="row" colspan="2">Total productos</th>
+        <th scope="row" colspan="2">Total:</th>
         <td>10</td>
         <td>
             <button class="btn btn-danger btn-sm" id="vaciar-carrito">
-                Vaciar Carrito
+                Vaciar
             </button>
         </td>
         <td class="font-weight-bold">$ <span>5000</span></td>

@@ -4,12 +4,20 @@
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 /************************NAVBAR************************/
 .main {
 	margin-top: 30px;
 }
 .navbar {
 	background-color: #3b7080;
+}
+
+.nav-link {
+	font-family: 'Noto Serif JP', serif;
 }
 
 #userData {
@@ -35,11 +43,22 @@
 }
 
 
-.btn-dark{
+.btn-add{
+	margin-top: 8px;
 	background-color: #db5375!important;
-	border-color: #8f0f29 !important;
 	font-family: "Raleway", sans-serif;
 	font-style: italic;
+	cursor: pointer;
+	border: none;
+	transition: all .4s;
+}
+
+.btn-add:hover {
+	border-radius: 5px;
+	transform: translateY(-10px);
+	box-shadow: 0 7px 0 -2px #3b7080,
+	0 15px 0 -4px #fca8bd,
+	0 16px 10px -3px #e4bdc7;
 }
 
 #btnUser {
@@ -63,6 +82,10 @@
 	color: #fef6c9;
 }
 
+#cards {
+	margin-right: 2.5rem;
+	margin-left: 2.5rem;
+}
 .col-12 p {
 	margin: 0;
 }
@@ -74,9 +97,37 @@
 	font-weight: 500;
 }
 
-.carrito, h1, hr {
-	width: 50%;
-	margin: auto;
-	margin-right: 0;
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+.lista {
+	display: flex;
+	flex-flow: column nowrap;
+	background-color: rgb(217, 247, 241);
+	width: 30rem;
+	box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, 
+	rgba(0, 0, 0, 0.23) 0 6px 6px;
+	border-radius: 9px;
 }
 
+
+h1 {
+	display: flex;
+	justify-content: center;
+	font-family: 'Tangerine', cursive;
+}
+
+.btn-info {
+	background-color: rgb(93, 209, 122);
+}
+
+.btn-danger {
+	background-color: rgb(60, 12, 94);
+}
+
+#vaciar-carrito {
+	background-color: rgb(158, 5, 5);
+}
