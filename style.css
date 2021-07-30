@@ -13,35 +13,28 @@ html {
 	margin-top: 30px;
 }
 .navbar {
-	background-color: #3b7080;
+	background-color: #089A9A;
+	height: 3rem;
+	padding: 0;
+}
+
+.navbar-brand {
+	font-family: 'MonteCarlo', cursive;
+	font-size: 2.5rem;
 }
 
 .nav-link {
 	font-family: 'Noto Serif JP', serif;
+	font-size: 1.3em;
+	font-variant: small-caps;
 }
 
-#userData {
-    display: flex;
-    flex-flow: row nowrap;
+.nav-link:hover {
+	color: #3b7080!important;
+	background-color: #e4bdc7;
 }
 
-#userName {
-	display: flex;
-	justify-self: end;
-	align-items: center;
-	margin-right: 15px;
-	color: #000;
-	font-weight: 600;
-    max-width: 200px;
-    max-height: 40px;
-}
-#userLogged {
-	margin-right: 15px;
-	color: #fff;
-	font-weight: 600;
-	margin-left: 15px;
-}
-
+/************************************ CARRITO *********************************/
 
 .btn-add{
 	margin-top: 8px;
@@ -61,12 +54,48 @@ html {
 	0 16px 10px -3px #e4bdc7;
 }
 
-#btnUser {
-	background-color: rgb(52, 158, 158) !important;
-	font-size: 18px;
-	font-weight: 600;
+.container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-top: 10px;
+}
+.lista {
+	display: flex;
+	flex-flow: column nowrap;
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	margin-top: 11rem;
+	background-color: rgb(217, 247, 241);
+	width: 30rem;
+	box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, 
+	rgba(0, 0, 0, 0.23) 0 6px 6px;
+	border-radius: 9px;
 }
 
+#carritoButton {
+	background-color: transparent;
+	border: none;
+	width: 2.5rem;
+}
+
+#carritoIcono {
+	width: 2.5em;
+	margin-right: 1rem;
+}
+
+.btn-info {
+	background-color: rgb(93, 209, 122);
+}
+
+.btn-danger {
+	background-color: rgb(60, 12, 94);
+}
+
+#vaciar-carrito {
+	background-color: rgb(158, 5, 5);
+}
 /**********************FOOTER************************/
 .footerBot {
 	display: flex;
@@ -82,6 +111,7 @@ html {
 	color: #fef6c9;
 }
 
+/* ********************************* MAIN CONTENT *************************************** */
 #cards {
 	margin-right: 2.5rem;
 	margin-left: 2.5rem;
@@ -90,44 +120,9 @@ html {
 	margin: 0;
 }
 
-#whatsapp,
-#instagram {
-	color: #000;
-	font-size: 20px;
-	font-weight: 500;
-}
-
-.container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 10px;
-}
-.lista {
-	display: flex;
-	flex-flow: column nowrap;
-	background-color: rgb(217, 247, 241);
-	width: 30rem;
-	box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, 
-	rgba(0, 0, 0, 0.23) 0 6px 6px;
-	border-radius: 9px;
-}
-
-
 h1 {
 	display: flex;
 	justify-content: center;
 	font-family: 'Tangerine', cursive;
 }
 
-.btn-info {
-	background-color: rgb(93, 209, 122);
-}
-
-.btn-danger {
-	background-color: rgb(60, 12, 94);
-}
-
-#vaciar-carrito {
-	background-color: rgb(158, 5, 5);
-}

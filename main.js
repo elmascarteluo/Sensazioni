@@ -1,12 +1,6 @@
-//Toma nombre de Usuario y lo muestra en la navbar
-const showUser = () => {
-    let userName = document.getElementById("userName").value;
-    document.getElementById("userLogged").innerHTML = "Bienvenido, " + userName;  
-}
-
 //Carrito
-const cards = document.getElementById("cards");
-const items = document.getElementById("items");
+// const cards = document.getElementById("cards");
+// const items = document.getElementById("items");
 const footer = document.getElementById("footer");
 const templateCard = document.getElementById("template-card").content;
 const templateFooter = document.getElementById("template-footer").content;
@@ -21,16 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
 		llevarACarrito();
 	}
 });
-cards.addEventListener("click", (e) => {
+// cards.addEventListener("click", (e) => {
+// 	añadirCarrito(e);
+// });
+$("#cards").click((e) => {
 	añadirCarrito(e);
-});
+})
 
-items.addEventListener("click", (e) => {
+// items.addEventListener("click", (e) => {
+// 	btnAccion(e);
+// });
+
+$("#items").click((e) => {
 	btnAccion(e);
-});
+})
 const fetchData = async () => {
 	try {
-		const res = await fetch("api.json");
+		const res = await fetch("productos.json");
 		const data = await res.json();
 		// console.log(data)
 		añadirCards(data);
@@ -43,7 +44,9 @@ const añadirCards = (data) => {
 	data.forEach((producto) => {
 		templateCard.querySelector("h5").textContent = producto.nombre;
 		templateCard.querySelector("p").textContent = producto.precio;
-		templateCard.querySelector("img").setAttribute("src", producto.thumbnailUrl);
+		templateCard
+			.querySelector("img")
+			.setAttribute("src", producto.thumbnailUrl);
 		templateCard.querySelector("button").dataset.id = producto.id;
 
 		const clone = templateCard.cloneNode(true);
@@ -52,7 +55,8 @@ const añadirCards = (data) => {
 	cards.appendChild(fragment);
 };
 
-const añadirCarrito = (e) => { //
+const añadirCarrito = (e) => {
+	//
 	if (e.target.classList.contains("btn-dark")) {
 		tomarCarrito(e.target.parentElement);
 	}
@@ -107,7 +111,7 @@ const pintarFooter = () => {
 		(acc, { cantidad }) => acc + cantidad,
 		0
 	);
-	const nPrecio = Object.values(carrito).reduce( 
+	const nPrecio = Object.values(carrito).reduce(
 		(acc, { cantidad, precio }) => acc + cantidad * precio,
 		0
 	);
@@ -119,13 +123,11 @@ const pintarFooter = () => {
 	fragment.appendChild(clone);
 	footer.appendChild(fragment);
 
-//Eliminar todos los items del carrito
-	const btnVaciar = document.getElementById("vaciar-carrito");
-	btnVaciar.addEventListener("click", () => {
+	//Eliminar todos los items del carrito
+	$("#vaciar-carrito").click(() => {
 		carrito = {};
 		llevarACarrito();
-	});
-};
+	})}
 //Botones de añadir o disminuir más de un producto
 const btnAccion = (e) => {
 	if (e.target.classList.contains("btn-info")) {
@@ -147,6 +149,13 @@ const btnAccion = (e) => {
 	e.stopPropagation();
 };
 
+// Añadir botón de carrito con ícono SVG
+$(".container-fluid").append(`<div id="carrito">
+								<button id="carritoButton">
+								<img id="carritoIcono" src="images/bag-2.svg" alt=""></button>
+								</div>`)
 
-
-
+//Mostrar/esconder carrito
+$("#carritoButton").click(() => {
+    $(".lista").toggle("fast")
+});

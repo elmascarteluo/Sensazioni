@@ -2,11 +2,14 @@
 <html lang="en">
 
 <head>
+    <!-- META TAGS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#3B7080">
+    <meta name="theme-color" content="#3B7080"> <!--Cambiar UI del explorador en Mobile -->
+    
     <title>Sensazioni Store | Lotions & Accesories.</title>
+    <!-- Llamadas a BS, CSS, y GFonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -17,9 +20,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&family=Tangerine:wght@400;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Sensazioni</a>
@@ -31,17 +36,17 @@
             <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Store</a>
+                        <a class="nav-link active" aria-current="page" href="#">store</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="#">contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="images.html" tabindex="-1">IMAGES</a>
+                        <a class="nav-link" href="images.html" tabindex="-1">galería</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
-                            aria-expanded="false">Catálogo</a>
+                            aria-expanded="false">catálogo</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown04">
                             <li><a class="dropdown-item" href="#">Lociones</a></li>
                             <li><a class="dropdown-item" href="#">Maquillaje</a></li>
@@ -49,17 +54,12 @@
                         </ul>
                     </li>
                 </ul>
-
-                <input type="text" id="userName" name="userName" placeholder="Ingresa tu nombre:">
-                <button id="btnUser" type="button" onclick="showUser()" class="btn btn-sm">Inicia Sesión</button>
-
-                <p id="userLogged"></p>
             </div>
         </div>
     </nav>
-
+    <!--  Contorno para cargar el carrito -->
     <div class="container">
-        <div class="lista">
+        <div class="lista" id="lista">
             <h1>Lista de Compras</h1>
             <hr>
             <table class="table carrito">
@@ -81,7 +81,8 @@
             </table>
         </div>
     </div>
-    <div class="row mt-3 mt-xl-5" id="cards"></div>
+    <!-- Las cards de los diferentes productos -->
+    <div class="row mt-3 mt-xl-1" id="cards"></div>
 
     <template id="template-card">
         <div class="col-12 col-sm-6 col-md-4 col-xl-3 pl-0 pr-0 mb-5">
@@ -95,7 +96,7 @@
             </div>
         </div>
     </template>
-
+    <!-- CARRITO -->
     <template id="template-carrito">
         <tr>
             <th scope="row">id</th>
@@ -112,7 +113,7 @@
             <td>$ <span>500</span></td>
         </tr>
     </template>
-
+    <!-- Parte baja del carrito -->
     <template id="template-footer">
         <th scope="row" colspan="2">Total:</th>
         <td>10</td>
@@ -124,11 +125,13 @@
         <td class="font-weight-bold">$ <span>5000</span></td>
     </template>
 
-
+    <!-- FOOTER del sitio -->
     <footer class="footerBot">
         <h3>Sensazioni by Marilin Velázquez</h3>
     </footer>
 
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
