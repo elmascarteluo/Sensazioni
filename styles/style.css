@@ -13,45 +13,44 @@ html {
 	margin-top: 30px;
 }
 .navbar {
-	background-color: #089A9A;
+	background-color: #089a9a;
 	height: 3rem;
 	padding: 0;
 }
 
 .navbar-brand {
-	font-family: 'MonteCarlo', cursive;
+	font-family: "MonteCarlo", cursive;
 	font-size: 2.5rem;
 }
 
 .nav-link {
-	font-family: 'Noto Serif JP', serif;
+	font-family: "Noto Serif JP", serif;
 	font-size: 1.3em;
 	font-variant: small-caps;
 }
 
 .nav-link:hover {
-	color: #3b7080!important;
+	color: #3b7080 !important;
 	background-color: #e4bdc7;
 }
 
 /************************************ CARRITO *********************************/
 
-.btn-add{
+.btn-add {
 	margin-top: 8px;
-	background-color: #db5375!important;
+	background-color: #db5375 !important;
 	font-family: "Raleway", sans-serif;
 	font-style: italic;
 	cursor: pointer;
 	border: none;
-	transition: all .4s;
+	transition: all 0.4s;
 }
 
 .btn-add:hover {
 	border-radius: 5px;
 	transform: translateY(-10px);
-	box-shadow: 0 7px 0 -2px #3b7080,
-	0 15px 0 -4px #fca8bd,
-	0 16px 10px -3px #e4bdc7;
+	box-shadow: 0 7px 0 -2px #3b7080, 0 15px 0 -4px #fca8bd,
+		0 16px 10px -3px #e4bdc7;
 }
 
 .container {
@@ -69,8 +68,7 @@ html {
 	margin-top: 11rem;
 	background-color: rgb(217, 247, 241);
 	width: 30rem;
-	box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, 
-	rgba(0, 0, 0, 0.23) 0 6px 6px;
+	box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
 	border-radius: 9px;
 }
 
@@ -104,7 +102,7 @@ html {
 	align-items: center;
 	width: 100%;
 	height: 4.7em;
-    margin-top: 85px;
+	margin-top: 85px;
 	bottom: 0;
 	background-color: #db5375;
 	z-index: 1999;
@@ -123,6 +121,40 @@ html {
 h1 {
 	display: flex;
 	justify-content: center;
-	font-family: 'Tangerine', cursive;
+	font-family: "Tangerine", cursive;
+}
+
+.precioTag {
+	display: flex;
+}
+
+#bancoImgs img {
+	display: none;
+}
+#images {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #3b708051;
+}
+.carousel {
+	margin-top: 3rem;
+	width: 400px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+	background-color: #db537551;
+}
+#back {
+	width: 400px;
+	height: 35px;
+	border: none;
+	background-color: #3b7080;
+	color: #fff;
+}
+
+#back:hover {
+	background-color: #db5375;
 }
 

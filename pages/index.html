@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#3B7080"> <!--Cambiar UI del explorador en Mobile -->
-    
+    <meta name="theme-color" content="#3B7080">
+    <!--Cambiar UI del explorador en Mobile -->
+
     <title>Sensazioni Store | Lotions & Accesories.</title>
     <!-- Llamadas a BS, CSS, y GFonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -48,9 +49,11 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
                             aria-expanded="false">catálogo</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown04">
-                            <li><a class="dropdown-item" href="#">Lociones</a></li>
-                            <li><a class="dropdown-item" href="#">Maquillaje</a></li>
-                            <li><a class="dropdown-item" href="#">Accesorios</a></li>
+                            <li><button id="all" class="dropdown-item">Todos los productos</button></li>
+                            <li><button id="bolso" class="dropdown-item">Bolsos</button></li>
+                            <li><button id="maquillaje" class="dropdown-item">Maquillaje</button></li>
+                            <li><button id="perfume" class="dropdown-item">Perfume</button></li>
+                            <li><button id="locion"class="dropdown-item">Lociones</button></li>
                         </ul>
                     </li>
                 </ul>
@@ -90,7 +93,9 @@
                 <img src="" alt="" class="card-img-top">
                 <div class="card-body">
                     <h5>Titulo</h5>
-                    <p>precio</p>
+                    <div class="precioTag">
+                        $<p>precio</p>
+                    </div>
                     <button class="btn btn-dark btn-add">Añadir a la lista</button>
                 </div>
             </div>
@@ -110,7 +115,7 @@
                     -
                 </button>
             </td>
-            <td>$ <span>500</span></td>
+            <td>$<span>500</span></td>
         </tr>
     </template>
     <!-- Parte baja del carrito -->
@@ -136,6 +141,9 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
         </script>
     <script src="main.js"></script>
+    <script src="functions.js"></script>
+    <script src="events.js"></script>
+
 
 </body>
 

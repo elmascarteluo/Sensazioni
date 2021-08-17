@@ -1,8 +1,29 @@
+const footer = document.getElementById("footer");
+const templateCard = document.getElementById("template-card").content;
+const templateFooter = document.getElementById("template-footer").content;
+const templateCarrito = document.getElementById("template-carrito").content;
+const fragment = document.createDocumentFragment();
+let carrito = {};
+
+const fetchData = async () => {
+	try {
+		const res = await fetch("productos.json");
+		const data = await res.json();
+
+		añadirCards(data);
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+//Llenamos los datos de los templates con la información en el JSON
 const añadirCards = (data) => {
 	data.forEach((producto) => {
 		templateCard.querySelector("h5").textContent = producto.nombre;
 		templateCard.querySelector("p").textContent = producto.precio;
-		templateCard.querySelector("img").setAttribute("src", producto.thumbnailUrl);
+		templateCard
+			.querySelector("img")
+			.setAttribute("src", producto.thumbnailUrl);
 		templateCard.querySelector("button").dataset.id = producto.id;
 
 		const clone = templateCard.cloneNode(true);
@@ -11,11 +32,12 @@ const añadirCards = (data) => {
 	cards.appendChild(fragment);
 };
 
-const añadirCarrito = (e) => { //
+const añadirCarrito = (e) => {
+	//
 	if (e.target.classList.contains("btn-dark")) {
 		tomarCarrito(e.target.parentElement);
 	}
-	e.stopPropagation(); //Detener otras acciones aparte de la que se quiere hacer target
+	e.stopPropagation();
 };
 
 const tomarCarrito = (objeto) => {
@@ -58,7 +80,6 @@ const pintarFooter = () => {
 	footer.innerHTML = "";
 	if (Object.keys(carrito).length === 0) {
 		footer.innerHTML = `<th scope="row" colspan="5">¡Añade los productos que te gustan!</th>`;
-
 		return; //Detecta si el carrito está vacío e imprime el th y para el restoo del código
 	}
 
@@ -66,11 +87,10 @@ const pintarFooter = () => {
 		(acc, { cantidad }) => acc + cantidad,
 		0
 	);
-	const nPrecio = Object.values(carrito).reduce( 
+	const nPrecio = Object.values(carrito).reduce(
 		(acc, { cantidad, precio }) => acc + cantidad * precio,
 		0
 	);
-
 	templateFooter.querySelectorAll("td")[0].textContent = nCantidad;
 	templateFooter.querySelector("span").textContent = nPrecio;
 
@@ -78,31 +98,9 @@ const pintarFooter = () => {
 	fragment.appendChild(clone);
 	footer.appendChild(fragment);
 
-//Eliminar todos los items del carrito
-	const btnVaciar = document.getElementById("vaciar-carrito");
-	btnVaciar.addEventListener("click", () => {
+	//Eliminar todos los items del carrito
+	$("#vaciar-carrito").click(() => {
 		carrito = {};
 		llevarACarrito();
 	});
 };
-//Botones de añadir o disminuir más de un producto
-const btnAccion = (e) => {
-	if (e.target.classList.contains("btn-info")) {
-		const producto = carrito[e.target.dataset.id];
-		producto.cantidad++;
-		carrito[e.target.dataset.id] = { ...producto };
-		llevarACarrito();
-	}
-
-	if (e.target.classList.contains("btn-danger")) {
-		const producto = carrito[e.target.dataset.id];
-		producto.cantidad--;
-		if (producto.cantidad === 0) {
-			delete carrito[e.target.dataset.id];
-		}
-		llevarACarrito();
-	}
-
-	e.stopPropagation();
-};
-
