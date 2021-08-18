@@ -63,6 +63,36 @@ html {
 	margin-top: 10px;
 }
 
+@media only screen and (max-width: 500px) {
+	.navbar-collapse {
+		background-color: #3b708051;
+	}
+	.navbar-toggler {
+		background-color: #db537548 !important;
+		margin-top: 5px;
+		border-radius: 10px;
+	}
+
+	.container-fluid {
+		margin-top: -10px;
+		z-index: 1000;
+	}
+	#carritoButton {
+		position: sticky;
+	}
+
+	#lista {
+		width: 90%;
+		margin-top: 14rem;
+	}
+
+	.nav-link {
+		font-size: 1.4em;
+		font-weight: 600;
+		color: #3b7080 !important;
+	}
+}
+
 .lista {
 	display: flex;
 	flex-flow: column nowrap;
