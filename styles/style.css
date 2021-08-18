@@ -38,7 +38,25 @@ html {
 }
 
 /************************************ CARRITO *********************************/
+#cabeceraCarrito {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
 
+#cabeceraCarrito h1 {
+	margin-left: 6rem;
+}
+
+#cerrarCarrito {
+	width: 22px;
+	height: 22px;
+	margin-left: 7rem;
+	margin-top: 13px;
+	border: none;
+	border-radius: 50%;
+	background-color: #3b708062;
+}
 .btn-add {
 	margin-top: 8px;
 	background-color: #db5375 !important;

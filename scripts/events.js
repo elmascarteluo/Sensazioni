@@ -39,6 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
 $("#carritoButton").click(() => {
 	$(".lista").toggle("fast");
 });
+
+$("#cerrarCarrito").click(() => {
+	$(".lista").fadeOut("fast");
+})
 //Pintar las cards dependiendo de la categoría que se seleccione en el dropdown, usando el .tipo del JSON
 $(".dropdown-item").click((e) => {
 	const fetchData = async () => {
