@@ -80,7 +80,7 @@ const pintarFooter = () => {
 	footer.innerHTML = "";
 	if (Object.keys(carrito).length === 0) {
 		footer.innerHTML = `<th scope="row" colspan="5">¡Añade los productos que te gustan!</th>`;
-		return; //Detecta si el carrito está vacío e imprime el th y para el restoo del código
+		return; //Detecta si el carrito está vacío e imprime el th y para el resto del código
 	}
 
 	const nCantidad = Object.values(carrito).reduce(
@@ -103,4 +103,13 @@ const pintarFooter = () => {
 		carrito = {};
 		llevarACarrito();
 	});
+
+	$("#comprar").click(() => {
+		carrito = {};
+		llevarACarrito();
+		alert("Tu compra ha sido procesada, ¡muchas gracias!")
+	});
+	
 };
+
+//Botón de comprar, muestra alert y limpia el carrito

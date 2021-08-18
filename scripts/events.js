@@ -39,10 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 $("#carritoButton").click(() => {
 	$(".lista").toggle("fast");
 });
-
-$("#back").click((e) => {
-	añadirCarrito(e);
-});
+//Pintar las cards dependiendo de la categoría que se seleccione en el dropdown, usando el .tipo del JSON
 $(".dropdown-item").click((e) => {
 	const fetchData = async () => {
 		try {
@@ -74,8 +71,8 @@ $(".dropdown-item").click((e) => {
 		}
 	});
 });
-
-$("#all").click((e) => {
+//Pintar todas las cards al seleccionar todos los productos en el dropdown
+$("#all").click(() => {
 	const fetchData = async () => {
 		try {
 			const res = await fetch("productos.json");
@@ -105,3 +102,5 @@ $("#all").click((e) => {
 		}
 	});
 });
+
+
