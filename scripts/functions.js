@@ -5,6 +5,7 @@ const templateCarrito = document.getElementById("template-carrito").content;
 const fragment = document.createDocumentFragment();
 let carrito = {};
 
+// Promesa asíncrona del JSON
 const fetchData = async () => {
 	try {
 		const res = await fetch("productos.json");
@@ -103,13 +104,10 @@ const pintarFooter = () => {
 		carrito = {};
 		llevarACarrito();
 	});
-
+	//Botón de comprar, muestra alert y limpia el carrito
 	$("#comprar").click(() => {
 		carrito = {};
 		llevarACarrito();
-		alert("Tu compra ha sido procesada, ¡muchas gracias!")
+		alert("Tu compra ha sido procesada, ¡muchas gracias!");
 	});
-	
 };
-
-//Botón de comprar, muestra alert y limpia el carrito

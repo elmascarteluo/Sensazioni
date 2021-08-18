@@ -4,5 +4,5 @@ $(".container-fluid").append(`<div id="carrito">
 								</div>`);
 
 $("#cabeceraCarrito").append(`<button id="cerrarCarrito">
-								<img id="cerrarCarritoIcono" src="../images/close-circle.svg" alt=""></button>
+								<img id="cerrarCarritoIcono" src="../images/close-circle2.svg" alt=""></button>
 								`);
